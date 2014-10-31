@@ -9,6 +9,13 @@ using ZXing.QrCode;
 using ZXing.Common;
 using ZXing.Rendering;
 using System.Text.RegularExpressions;
+using System.IO;
+
+using System.Xml;
+using System.Xml.Serialization;
+using System.Data;
+using Microsoft.Reporting.WinForms;
+using System.Drawing.Imaging;
 
 namespace ItemPrinting
 {
@@ -36,7 +43,7 @@ namespace ItemPrinting
 
                 return;
 
-            }            
+            }
             options = new QrCodeEncodingOptions
             {
                 DisableECI = true,
@@ -173,5 +180,118 @@ namespace ItemPrinting
             BarcodeReader reader = new BarcodeReader();
             Result result = reader.Decode((Bitmap)pictureBox1.Image);
         }
+        public static byte[] BitmapToBytes(Bitmap Bitmap)
+        {
+            MemoryStream ms = null;
+            try
+            {
+                ms = new MemoryStream();
+                Bitmap.Save(ms, ImageFormat.Gif);
+                byte[] byteImage = new Byte[ms.Length];
+                byteImage = ms.ToArray();
+                return byteImage;
+            }
+            catch (ArgumentNullException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ms.Close();
+            }
+        }
+        // Strem轉換字節數組
+        /// <summary>
+        /// 在表报rdlc中。在报表主体中拖放一个image控件。
+        /// 设置其Source为database，value=System.Convert.FromBase64String(Fields!barCode.Value)【byte[]数组时】，
+        /// Base64String类型时直接绑定即可 // 关键之处
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns></returns>
+        public static Byte[] StreamToBytes(Stream stream)
+        {
+            byte[] bytes = new byte[stream.Length];
+            if (stream.CanRead)
+            {
+                stream.Read(bytes, 0, (int)stream.Length);
+            }
+            stream.Close();
+            return bytes;
+
+        }
+        public static void initRV(ReportViewer rv)
+        {
+            rv.Reset();
+            rv.LocalReport.DataSources.Clear();
+        }
+        public static void ShowReportViewer(ReportViewer rv, string rvname)
+        {
+            rv.LocalReport.DisplayName = rvname;
+            rv.Refresh();
+            rv.LocalReport.Refresh();
+            rv.Visible = true;
+        }
+
+        public static void addDataSourceToReportViewer(ReportViewer rv, string reportDataSourceName, DataSet ds)
+        {
+            try
+            {
+                ReportDataSource rd = new ReportDataSource(reportDataSourceName, ds.Tables[0]);
+                rv.LocalReport.DataSources.Add(rd);
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+
+        } 
+        public static void addDataSourceToReportViewer(ReportViewer rv, string reportDataSourceName, DataTable dt)
+        {
+            try
+            {
+                ReportDataSource rd = new ReportDataSource(reportDataSourceName, dt);
+                rv.LocalReport.DataSources.Add(rd);
+
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+
+        }
+        public static void initReportViewerLoadXMLfromPath(ReportViewer rv, string path)
+        {
+            //string tempxml = mydssqltemplate.Tables[0].Rows[0]["tempxml"].ToString();
+            XmlDocument sourceDoc = new XmlDocument();
+            //@"Reports\SO\siv_mstr_p.rdlc"
+            path = AppDomain.CurrentDomain.BaseDirectory + path;
+            sourceDoc.Load(path);
+            XmlSerializer serializer = new XmlSerializer(typeof(XmlDocument));
+            var m_rdl = new MemoryStream();
+            serializer.Serialize(m_rdl, sourceDoc);
+            if (m_rdl == null)
+            {
+                return;
+            }
+            rv.Reset();
+            m_rdl.Position = 0;
+            rv.LocalReport.DataSources.Clear();
+            rv.LocalReport.LoadReportDefinition(m_rdl);
+        }
+        public static void ShowReportViewer(ReportViewer rv, string rvname, bool addprefxi)
+        {
+            string piefix = "Date" + DateTime.Today.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Today.Day.ToString() + "H" + DateTime.Now.Hour + "M" + DateTime.Now.Minute;
+            rv.LocalReport.DisplayName = rvname + piefix;
+            rv.RefreshReport();
+            //rv.LocalReport.Refresh();
+            rv.Visible = true;
+        }
+
+        ///////////////////////////////////////////
+        //////////////end 
+        ////////////////////////////////////////////////
     }
 }

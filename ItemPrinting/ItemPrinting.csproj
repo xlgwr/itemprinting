@@ -50,16 +50,6 @@
       <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.ProcessingObjectModel\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebDesign\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.WebForms.DLL</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.SqlServer.Types\11.0.0.0__89845dcd8080cc91\Microsoft.SqlServer.Types.dll</HintPath>
@@ -87,6 +77,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="barcode.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>barcode.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DocelemtnBase.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -112,6 +107,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="barcode.xsc">
+      <DependentUpon>barcode.xsd</DependentUpon>
+    </None>
+    <None Include="barcode.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>barcode.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="barcode.xss">
+      <DependentUpon>barcode.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

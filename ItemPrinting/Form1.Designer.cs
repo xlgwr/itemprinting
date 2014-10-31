@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -35,11 +37,18 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.barcode = new ItemPrinting.barcode();
+            this.barcodeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
+            reportDataSource2.Name = "barcode";
+            reportDataSource2.Value = this.barcodeBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "ItemPrinting.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 146);
             this.reportViewer1.Name = "reportViewer1";
@@ -101,6 +110,16 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // barcode
+            // 
+            this.barcode.DataSetName = "barcode";
+            this.barcode.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // barcodeBindingSource
+            // 
+            this.barcodeBindingSource.DataMember = "barcode";
+            this.barcodeBindingSource.DataSource = this.barcode;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -114,9 +133,13 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barcodeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,6 +154,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource barcodeBindingSource;
+        private barcode barcode;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,10 +24,35 @@ namespace ItemPrinting
             //this.reportViewer1.RefreshReport();
             textBox1.Text = DateTime.Now.ToString("yyyMMddhhmm").Substring(0, 12);
         }
+        public void initreport(PictureBox pb,ReportViewer rv)
+        {
+            Bitmap bp = (Bitmap)pb.Image;
+            byte[] imgBytes = Program.BitmapToBytes(bp);
+
+            DataTable dt = new DataTable();  //自定义的数据集
+            DataColumn dc = new DataColumn("ProID");
+            DataColumn dc2 = new DataColumn("barCode");
+            DataColumn dc3 = new DataColumn("date");
+            dt.Columns.Add(dc);
+            dt.Columns.Add(dc2);
+            dt.Columns.Add(dc3);
+
+            DataRow dtRow = dt.NewRow();
+            dtRow["ProID"] = "BD11-12/800-16D";
+            dtRow["barCode"] = Convert.ToBase64String(imgBytes);  //存放前先转码。关键之处。
+            dtRow["date"] = "2009年06月26日";
+            dt.Rows.Add(dtRow);
+
+            rv.LocalReport.DataSources.Clear();
+            Program.addDataSourceToReportViewer(rv, "barcode", dt);
+            Program.ShowReportViewer(rv, textBox1.Text,true);
+            rv.RefreshReport();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Program.CreateBarCode(pictureBox1, textBox1.Text);
+            initreport(pictureBox1, reportViewer1);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -56,6 +82,13 @@ namespace ItemPrinting
         private void button2_Click(object sender, EventArgs e)
         {
             Program.GenBarCode(pictureBox1, textBox1.Text);
+            initreport(pictureBox1, reportViewer1);
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            reportViewer1.Width = this.Width-10;
+            reportViewer1.Height = this.Height - reportViewer1.Top - 10;
         }
     }
 }
