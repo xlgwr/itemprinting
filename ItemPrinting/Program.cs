@@ -16,6 +16,8 @@ using System.Xml.Serialization;
 using System.Data;
 using Microsoft.Reporting.WinForms;
 using System.Drawing.Imaging;
+using System.Drawing.Printing;
+using System.Diagnostics;
 
 namespace ItemPrinting
 {
@@ -55,6 +57,34 @@ namespace ItemPrinting
                 CharacterSet = "UTF-8",//ISO-8859-1
                 Width = pb.Width,
                 Height = pb.Height
+            };
+            write = new BarcodeWriter();
+            write.Format = BarcodeFormat.QR_CODE;
+            write.Options = options;
+            Bitmap bitmap = write.Write(contents);
+            pb.Image = bitmap;
+        }
+        /// <summary>
+        /// 生成QR码
+        /// </summary>
+        /// <param name="pb"></param>
+        /// <param name="contents"></param>
+        public static void GenBarCode(PictureBox pb, int width, int height, string contents)
+        {
+            if (contents == string.Empty)
+            {
+
+                MessageBox.Show("输入内容不能为空！");
+
+                return;
+
+            }
+            options = new QrCodeEncodingOptions
+            {
+                DisableECI = true,
+                CharacterSet = "UTF-8",//ISO-8859-1
+                Width = width,
+                Height = height
             };
             write = new BarcodeWriter();
             write.Format = BarcodeFormat.QR_CODE;
@@ -114,6 +144,51 @@ namespace ItemPrinting
             {
                 Width = pictureBox1.Width,
                 Height = pictureBox1.Height
+
+            };
+
+            writer = new BarcodeWriter();
+
+            writer.Format = BarcodeFormat.ITF;
+
+            writer.Options = options;
+
+            Bitmap bitmap = writer.Write(Contents);
+
+            pictureBox1.Image = bitmap;
+
+        }
+        ///<summary>
+
+        ///生成条形码
+
+        ///</summary>
+
+        ///<paramname="pictureBox1"></param>
+
+        ///<paramname="Contents"></param>
+
+        public static void CreateBarCode(PictureBox pictureBox1, int width, int height, string Contents)
+        {
+
+            Regex rg = new Regex("^[0-9]{12}$");
+
+            if (!rg.IsMatch(Contents))
+            {
+
+                MessageBox.Show("本例子采用EAN_13编码，需要输入12位数字");
+
+                return;
+
+            }
+
+            EncodingOptions options = null;
+            BarcodeWriter writer = null;
+
+            options = new EncodingOptions
+            {
+                Width = width,
+                Height = height
 
             };
 
@@ -267,7 +342,7 @@ namespace ItemPrinting
             //string tempxml = mydssqltemplate.Tables[0].Rows[0]["tempxml"].ToString();
             XmlDocument sourceDoc = new XmlDocument();
             //@"Reports\SO\siv_mstr_p.rdlc"
-            path = AppDomain.CurrentDomain.BaseDirectory + path;
+            path = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + path;
             sourceDoc.Load(path);
             XmlSerializer serializer = new XmlSerializer(typeof(XmlDocument));
             var m_rdl = new MemoryStream();
@@ -288,6 +363,78 @@ namespace ItemPrinting
             rv.RefreshReport();
             //rv.LocalReport.Refresh();
             rv.Visible = true;
+        }
+        /// <summary>
+        /// Excel、PDF 和 Image。
+        /// </summary>
+        /// <param name="rv"></param>
+        /// <param name="namePath"></param>
+        /// <param name="strtype"></param>
+        public static string ExportTypeForReportViewer(ReportViewer rv, string strtype, string namePath, out string fullpath)
+        {
+            Warning[] Warnings;
+            string[] strStreamIds;
+            string strMimeType;
+            string strEncoding;
+            string strFileNameExtension;
+            string piefix = "D" + DateTime.Today.Year.ToString() + DateTime.Now.Month.ToString() + DateTime.Today.Day.ToString() + "H" + DateTime.Now.Hour + "M" + DateTime.Now.Minute + "-";
+
+            byte[] bytes = rv.LocalReport.Render(strtype, null, out strMimeType, out strEncoding, out strFileNameExtension, out strStreamIds, out Warnings);
+
+            string pathname = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + @"PDF\";
+            string strFilePath = @pathname + @piefix + @namePath;// @"D:\report.xls";
+
+            using (System.IO.FileStream fs = new FileStream(strFilePath, FileMode.Create))
+            {
+                fs.Write(bytes, 0, bytes.Length);
+
+                fullpath = strFilePath;
+                return "生成[" + strFilePath + "]OK";
+            }
+
+
+        }
+        //打印方法1慢
+
+        public static void pdfPrintProcess(string filePath)
+        {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                return;
+            }
+            string pdfPath = filePath;
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            //不现实调用程序窗口,但是对于某些应用无效
+            p.StartInfo.CreateNoWindow = true;
+            p.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+
+            //采用操作系统自动识别的模式
+            p.StartInfo.UseShellExecute = true;
+
+            //要打印的文件路径，可以是WORD,EXCEL,PDF,TXT等等
+            p.StartInfo.FileName = pdfPath;
+
+            //指定执行的动作，是打印，即print，打开是 open
+            p.StartInfo.Verb = "print";
+
+            //开始
+            p.Start();
+
+
+        }
+        public static void pdfPrintAdobe(string filePath, AxAcroPDFLib.AxAcroPDF axAcroPDF1)
+        {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                return;
+            }
+            axAcroPDF1.LoadFile(filePath);
+            axAcroPDF1.setShowToolbar(false);
+
+            axAcroPDF1.LoadFile(filePath);
+            axAcroPDF1.printAll();
+
+
         }
 
         ///////////////////////////////////////////

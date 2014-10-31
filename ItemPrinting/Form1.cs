@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -48,10 +49,11 @@ namespace ItemPrinting
             dtRow["ProID"] = "BD11-12/800-16D";
             dtRow["barCode"] = Convert.ToBase64String(imgBytes);  //存放前先转码。关键之处。
             dtRow["date"] = DateTime.Now;
-            dtRow["contents"] = Program.DecodeBarCode(pb);
+            //dtRow["contents"] = Program.DecodeBarCode(pb);
             _barcodeDataTable.Rows.Add(dtRow);
 
-            rv.LocalReport.DataSources.Clear();
+            Program.initReportViewerLoadXMLfromPath(reportViewer1, "Report1.rdlc");
+            //rv.LocalReport.DataSources.Clear();
             Program.addDataSourceToReportViewer(rv, "barcode", _barcodeDataTable);
             Program.ShowReportViewer(rv, textBox1.Text, true);
             rv.RefreshReport();
@@ -59,7 +61,7 @@ namespace ItemPrinting
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.CreateBarCode(pictureBox1, textBox1.Text);
+            Program.CreateBarCode(pictureBox1, 99, 45, textBox1.Text);
             initReportViewerForBarCode(pictureBox1, reportViewer1);
         }
 
@@ -67,7 +69,7 @@ namespace ItemPrinting
         {
             if (pictureBox1.Image == null)
             {
-                MessageBox.Show("请录入图像后再解码！");
+                MessageBox.Show("请生成图像后再打印！");
                 return;
             }
             MessageBox.Show(Program.DecodeBarCode(pictureBox1));
@@ -77,27 +79,26 @@ namespace ItemPrinting
         {
             if (pictureBox1.Image == null)
             {
-                MessageBox.Show("请录入图像后再解码！");
+                MessageBox.Show("请生成图像后再导出！");
                 return;
             }
-            //else
-            //{
-            //    _doc = new DocementBase(pictureBox1.Image);
-            //}
-            //_doc.showPrintPreviewDialog();
-            reportViewer1.PrintDialog();
+            string allpdfpath;
+            lblmsg.Text = Program.ExportTypeForReportViewer(reportViewer1, "PDF", textBox1.Text + ".pdf",out allpdfpath);
+            //Program.pdfPrintProcess(allpdfpath);
+            Program.pdfPrintAdobe(allpdfpath,axAcroPDF1);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Program.GenBarCode(pictureBox1, textBox1.Text);
+            Program.GenBarCode(pictureBox1, 99, 99, textBox1.Text);
             initReportViewerForBarCode(pictureBox1, reportViewer1);
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            reportViewer1.Width = this.Width - 10;
-            reportViewer1.Height = this.Height - reportViewer1.Top - 10;
+            reportViewer1.Width = this.Width - 15;
+            reportViewer1.Height = this.Height - reportViewer1.Top - 15;
         }
     }
 }

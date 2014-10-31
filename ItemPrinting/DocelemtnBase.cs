@@ -12,7 +12,7 @@ namespace ItemPrinting
     {
 
         //fields
-        public Font Font = new Font("Verdana", 10, GraphicsUnit.Point);
+        //public Font Font = new Font("Verdana", 10, GraphicsUnit.Point);
 
         private Image _Image;
 
