@@ -285,6 +285,8 @@ namespace ItemPrinting {
             
             private global::System.Data.DataColumn columndate;
             
+            private global::System.Data.DataColumn columncontents;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public barcodeDataTable() {
@@ -344,6 +346,14 @@ namespace ItemPrinting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn contentsColumn {
+                get {
+                    return this.columncontents;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -379,12 +389,13 @@ namespace ItemPrinting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public barcodeRow AddbarcodeRow(string ProID, string barCode, string date) {
+            public barcodeRow AddbarcodeRow(string ProID, string barCode, string date, string contents) {
                 barcodeRow rowbarcodeRow = ((barcodeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ProID,
                         barCode,
-                        date};
+                        date,
+                        contents};
                 rowbarcodeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowbarcodeRow);
                 return rowbarcodeRow;
@@ -410,6 +421,7 @@ namespace ItemPrinting {
                 this.columnProID = base.Columns["ProID"];
                 this.columnbarCode = base.Columns["barCode"];
                 this.columndate = base.Columns["date"];
+                this.columncontents = base.Columns["contents"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -421,6 +433,8 @@ namespace ItemPrinting {
                 base.Columns.Add(this.columnbarCode);
                 this.columndate = new global::System.Data.DataColumn("date", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate);
+                this.columncontents = new global::System.Data.DataColumn("contents", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncontents);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_barcode");
                 this.ExtendedProperties.Add("Generator_UserTableName", "barcode");
             }
@@ -613,6 +627,22 @@ namespace ItemPrinting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string contents {
+                get {
+                    try {
+                        return ((string)(this[this.tablebarcode.contentsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'contents\' in table \'barcode\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablebarcode.contentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsProIDNull() {
                 return this.IsNull(this.tablebarcode.ProIDColumn);
             }
@@ -645,6 +675,18 @@ namespace ItemPrinting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdateNull() {
                 this[this.tablebarcode.dateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscontentsNull() {
+                return this.IsNull(this.tablebarcode.contentsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcontentsNull() {
+                this[this.tablebarcode.contentsColumn] = global::System.Convert.DBNull;
             }
         }
         

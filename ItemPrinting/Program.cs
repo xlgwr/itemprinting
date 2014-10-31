@@ -34,6 +34,11 @@ namespace ItemPrinting
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+        /// <summary>
+        /// 生成QR码
+        /// </summary>
+        /// <param name="pb"></param>
+        /// <param name="contents"></param>
         public static void GenBarCode(PictureBox pb, string contents)
         {
             if (contents == string.Empty)
@@ -57,6 +62,10 @@ namespace ItemPrinting
             Bitmap bitmap = write.Write(contents);
             pb.Image = bitmap;
         }
+        ///<summary>
+        ///解码
+        ///</summary>
+        ///<paramname="pictureBox1"></param>
         public static string DecodeBarCode(PictureBox pb, string pathImage)
         {
             reader = new BarcodeReader();
@@ -64,6 +73,10 @@ namespace ItemPrinting
             Result result = reader.Decode((Bitmap)pb.Image);
             return result.Text;
         }
+        ///<summary>
+        ///解码
+        ///</summary>
+        ///<paramname="pictureBox1"></param>
         public static string DecodeBarCode(PictureBox pb)
         {
             reader = new BarcodeReader();
@@ -167,19 +180,6 @@ namespace ItemPrinting
 
         }
 
-        ///<summary>
-
-        ///解码
-
-        ///</summary>
-
-        ///<paramname="pictureBox1"></param>
-
-        public static void Decode(PictureBox pictureBox1)
-        {
-            BarcodeReader reader = new BarcodeReader();
-            Result result = reader.Decode((Bitmap)pictureBox1.Image);
-        }
         public static byte[] BitmapToBytes(Bitmap Bitmap)
         {
             MemoryStream ms = null;
@@ -246,7 +246,7 @@ namespace ItemPrinting
             }
 
 
-        } 
+        }
         public static void addDataSourceToReportViewer(ReportViewer rv, string reportDataSourceName, DataTable dt)
         {
             try

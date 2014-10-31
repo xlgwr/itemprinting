@@ -7,8 +7,8 @@
         <Value>=System.Convert.FromBase64String(First(Fields!barCode.Value, "barcode"))</Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>1.18745cm</Top>
-        <Left>5.87058cm</Left>
+        <Top>1.74307cm</Top>
+        <Left>6.71724cm</Left>
         <Height>2.77cm</Height>
         <Width>2.71708cm</Width>
         <Style>
@@ -17,8 +17,42 @@
           </Border>
         </Style>
       </Image>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>="BarCode Test: " &amp; First(Fields!contents.Value, "barcode")</Value>
+                <Style>
+                  <FontFamily>Microsoft YaHei</FontFamily>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>0.81703cm</Top>
+        <Left>4.2037cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.65938cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>2.86458in</Height>
     <Style />
   </Body>
   <Width>6.5in</Width>
@@ -59,6 +93,10 @@
         </Field>
         <Field Name="date">
           <DataField>date</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contents">
+          <DataField>contents</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
