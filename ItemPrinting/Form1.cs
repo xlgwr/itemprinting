@@ -82,10 +82,15 @@ namespace ItemPrinting
                 MessageBox.Show("请生成图像后再导出！");
                 return;
             }
+            string pathname = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase + @"PDF\";
             string allpdfpath;
             lblmsg.Text = Program.ExportTypeForReportViewer(reportViewer1, "PDF", textBox1.Text + ".pdf",out allpdfpath);
-            //Program.pdfPrintProcess(allpdfpath);
-            Program.pdfPrintAdobe(allpdfpath,axAcroPDF1);
+           // Program.pdfPrintProcess(allpdfpath);
+           Program.pdfPrintProcess2(allpdfpath);
+           //Program.pdfPrintAdobe(allpdfpath,axAcroPDF1);
+           // Program.pdfPrintiTextSharp(allpdfpath,pathname+"towrite.pdf",true);
+           textBox1.SelectAll();
+           textBox1.Focus();
 
         }
 

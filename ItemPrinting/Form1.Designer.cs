@@ -41,11 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.lblmsg = new System.Windows.Forms.Label();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
             ((System.ComponentModel.ISupportInitialize)(this.barcodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barcode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
             // 
             // barcodeBindingSource
@@ -127,29 +125,18 @@
             // 
             // lblmsg
             // 
-            this.lblmsg.Font = new System.Drawing.Font("SimSun", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblmsg.Font = new System.Drawing.Font("宋体", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblmsg.ForeColor = System.Drawing.Color.Red;
             this.lblmsg.Location = new System.Drawing.Point(0, 122);
             this.lblmsg.Name = "lblmsg";
             this.lblmsg.Size = new System.Drawing.Size(682, 31);
             this.lblmsg.TabIndex = 7;
             // 
-            // axAcroPDF1
-            // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(605, 94);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(37, 25);
-            this.axAcroPDF1.TabIndex = 8;
-            this.axAcroPDF1.Visible = false;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 356);
-            this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.lblmsg);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button5);
@@ -167,7 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.barcodeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barcode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +171,6 @@
         private barcode barcode;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblmsg;
-        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
     }
 }
 

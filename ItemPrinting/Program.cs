@@ -19,6 +19,7 @@ using System.Drawing.Imaging;
 using System.Drawing.Printing;
 using System.Diagnostics;
 
+
 namespace ItemPrinting
 {
     static class Program
@@ -422,21 +423,40 @@ namespace ItemPrinting
 
 
         }
-        public static void pdfPrintAdobe(string filePath, AxAcroPDFLib.AxAcroPDF axAcroPDF1)
+        public static void pdfPrintProcess2(string filePath)
         {
             if (string.IsNullOrEmpty(filePath))
             {
                 return;
             }
-            axAcroPDF1.LoadFile(filePath);
-            axAcroPDF1.setShowToolbar(false);
-
-            axAcroPDF1.LoadFile(filePath);
-            axAcroPDF1.printAll();
+            //string SavePath = @"d:\temp.pdf";
+            //string printerName = "Apollo P2200";
+            //string pdfArguments = string.Format(" /p " + "\"" + SavePath + "\"" + "  \"" + printerName + "\"");
+            string pdfArguments = string.Format(" /p " + "\"" + filePath + "\"");
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+            p.StartInfo.FileName = "zfr.exe";//需要启动的程序名  
+            //MessageBox.Show(pdfArguments);
+            p.StartInfo.Arguments = pdfArguments;
+            p.Start();//启动  
+            //    pdfProcess.WaitForExit();
 
 
         }
+        //public static void pdfPrintAdobe(string filePath, AxAcroPDFLib.AxAcroPDF axAcroPDF1)
+        //{
+        //    if (string.IsNullOrEmpty(filePath))
+        //    {
+        //        return;
+        //    }
+        //    axAcroPDF1.LoadFile(filePath);
+        //    axAcroPDF1.setShowToolbar(false);
 
+        //    axAcroPDF1.LoadFile(filePath);
+        //    axAcroPDF1.printAll();
+
+
+        //}
+       
         ///////////////////////////////////////////
         //////////////end 
         ////////////////////////////////////////////////
