@@ -35,7 +35,7 @@ namespace ItemPrinting
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frm0ItemPrinting());
         }
         /// <summary>
         /// 生成QR码
@@ -432,7 +432,7 @@ namespace ItemPrinting
             //string SavePath = @"d:\temp.pdf";
             //string printerName = "Apollo P2200";
             //string pdfArguments = string.Format(" /p " + "\"" + SavePath + "\"" + "  \"" + printerName + "\"");
-            string pdfArguments = string.Format(" /p " + "\"" + filePath + "\"");
+            string pdfArguments = string.Format(" /p " + "\"" + filePath + "\"");// -n 1 -z 100
             System.Diagnostics.Process p = new System.Diagnostics.Process();
             p.StartInfo.FileName = "zfr.exe";//需要启动的程序名  
             //MessageBox.Show(pdfArguments);
@@ -441,6 +441,24 @@ namespace ItemPrinting
             //    pdfProcess.WaitForExit();
 
 
+        }
+        public static string vs_SplitStr(string vStr, Int16 intP, string vSplit) /*vSplit=":"   intP=2*/
+        {
+            string retStr = "";
+            if (vStr.Contains(vSplit)) { vStr = vStr.Replace(vSplit, ""); }
+            vStr = vStr.Trim();
+            if (vStr.Length != 12) { return "2nd Label长度不对"; }
+
+            if (intP == 0) { return retStr; }
+
+            if (vStr.Length % intP == 0)    /*求余数*/
+            {
+                for (Int16 i = 0; i < vStr.Length / intP; i++)
+                {
+                    retStr = (retStr.Length == 0 ? vStr.Substring(0, intP) : retStr + vSplit + vStr.Substring(intP * i, intP));
+                }
+            }
+            return retStr;
         }
         //public static void pdfPrintAdobe(string filePath, AxAcroPDFLib.AxAcroPDF axAcroPDF1)
         //{

@@ -77,7 +77,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="barcode.Designer.cs">
+    <Compile Include="DS\barcode.cs">
+      <DependentUpon>barcode.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DS\barcode.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>barcode.xsd</DependentUpon>
@@ -85,16 +89,16 @@
     <Compile Include="DocelemtnBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frm0ItemPrinting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frm0ItemPrinting.Designer.cs">
+      <DependentUpon>frm0ItemPrinting.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frm0ItemPrinting.resx">
+      <DependentUpon>frm0ItemPrinting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Report1.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -109,15 +113,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="barcode.xsc">
+    <None Include="DS\barcode.xsc">
       <DependentUpon>barcode.xsd</DependentUpon>
     </None>
-    <None Include="barcode.xsd">
+    <None Include="DS\barcode.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>barcode.Designer.cs</LastGenOutput>
     </None>
-    <None Include="barcode.xss">
+    <None Include="DS\barcode.xss">
       <DependentUpon>barcode.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
