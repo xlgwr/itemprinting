@@ -65,6 +65,7 @@ namespace ItemPrinting
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(682, 211);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Visible = false;
             // 
             // textBox1
             // 

@@ -6,8 +6,8 @@
         <Source>Database</Source>
         <Value>=System.Convert.FromBase64String(First(Fields!barCode.Value, "barcode"))</Value>
         <MIMEType>image/bmp</MIMEType>
-        <Top>17.03804cm</Top>
-        <Left>10.56575cm</Left>
+        <Top>17.29204cm</Top>
+        <Left>10.31175cm</Left>
         <Height>1.4cm</Height>
         <Width>1.4cm</Width>
         <Style>
@@ -60,8 +60,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>1.2847cm</Top>
-        <Left>2.96341cm</Left>
+        <Top>1.3482cm</Top>
+        <Left>2.86141cm</Left>
         <Height>0.62767cm</Height>
         <Width>9.02718cm</Width>
         <ZIndex>1</ZIndex>
@@ -92,8 +92,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.23604cm</Top>
-        <Left>1.62056cm</Left>
+        <Top>2.49004cm</Top>
+        <Left>1.60207cm</Left>
         <Height>0.35cm</Height>
         <Width>11.99036cm</Width>
         <ZIndex>2</ZIndex>
@@ -125,8 +125,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.58604cm</Top>
-        <Left>1.62056cm</Left>
+        <Top>2.84004cm</Top>
+        <Left>1.60207cm</Left>
         <Height>0.35cm</Height>
         <Width>11.99036cm</Width>
         <ZIndex>3</ZIndex>
@@ -158,8 +158,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>2.93604cm</Top>
-        <Left>1.62056cm</Left>
+        <Top>3.19004cm</Top>
+        <Left>1.60207cm</Left>
         <Height>0.35cm</Height>
         <Width>11.99036cm</Width>
         <ZIndex>4</ZIndex>
@@ -234,8 +234,28 @@
                       <rd:DefaultName>Textbox5</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -278,27 +298,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
@@ -342,27 +361,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -382,7 +400,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ssid1_2_4G.Value</Value>
+                              <Value>=" " &amp; Fields!ssid1_2_4G.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -398,27 +416,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -459,27 +476,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -499,7 +515,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ssid1_5G.Value</Value>
+                              <Value>=" " &amp; Fields!ssid1_5G.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -515,27 +531,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -576,27 +591,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -616,7 +630,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!AES1.Value</Value>
+                              <Value>=" " &amp; Fields!AES1.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -632,27 +646,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -693,27 +706,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -733,7 +745,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!PIN.Value</Value>
+                              <Value>=" " &amp; Fields!PIN.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -749,27 +761,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -824,8 +835,27 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
                         <BackgroundColor>Silver</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -868,27 +898,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -908,7 +937,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ssid2_2_4G.Value</Value>
+                              <Value>=" " &amp; Fields!ssid2_2_4G.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -924,27 +953,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -985,27 +1013,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1025,7 +1052,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ssid2_5G.Value</Value>
+                              <Value>=" " &amp; Fields!ssid2_5G.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1041,27 +1068,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1102,27 +1128,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1142,7 +1167,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!AES2.Value</Value>
+                              <Value>=" " &amp; Fields!AES2.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1158,27 +1183,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1228,27 +1252,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
@@ -1292,27 +1315,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1332,7 +1354,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!name.Value</Value>
+                              <Value>=" " &amp; Fields!name.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1348,27 +1370,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1409,27 +1430,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1449,7 +1469,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!name2.Value</Value>
+                              <Value>=" " &amp; Fields!name2.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1465,27 +1485,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1526,27 +1545,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1566,7 +1584,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!name3.Value</Value>
+                              <Value>=" " &amp; Fields!name3.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1582,27 +1600,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1643,27 +1660,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1683,7 +1699,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!lan_mac.Value</Value>
+                              <Value>=" " &amp; Fields!lan_mac.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1699,27 +1715,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1760,27 +1775,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1800,7 +1814,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!wan_mac.Value</Value>
+                              <Value>=" " &amp; Fields!wan_mac.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1816,27 +1830,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1877,27 +1890,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1917,7 +1929,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!wifi_mac_2_4.Value</Value>
+                              <Value>=" " &amp; Fields!wifi_mac_2_4.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -1933,27 +1945,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1994,27 +2005,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -2034,7 +2044,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!wifi_mac_5g.Value</Value>
+                              <Value>=" " &amp; Fields!wifi_mac_5g.Value</Value>
                               <Style>
                                 <FontFamily>HG丸ｺﾞｼｯｸM-PRO</FontFamily>
                                 <FontSize>10.5pt</FontSize>
@@ -2050,27 +2060,26 @@
                       <Style>
                         <Border>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
                         </Border>
                         <TopBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </TopBorder>
                         <BottomBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </BottomBorder>
                         <LeftBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </LeftBorder>
                         <RightBorder>
                           <Color>Black</Color>
                           <Style>Solid</Style>
-                          <Width>0.25pt</Width>
+                          <Width>1pt</Width>
                         </RightBorder>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -2114,9 +2123,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>barcode</DataSetName>
-        <Top>3.8291cm</Top>
-        <Left>1.72948cm</Left>
-        <Height>11.23649cm</Height>
+        <Top>4.0831cm</Top>
+        <Left>1.63974cm</Left>
+        <Height>11.2365cm</Height>
         <Width>11.32052cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -2145,8 +2154,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>15.56766cm</Top>
-        <Left>1.71581cm</Left>
+        <Top>15.82166cm</Top>
+        <Left>1.46732cm</Left>
         <Height>0.38989cm</Height>
         <Width>11.52469cm</Width>
         <ZIndex>6</ZIndex>
@@ -2178,8 +2187,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>15.95755cm</Top>
-        <Left>2.17398cm</Left>
+        <Top>16.21155cm</Top>
+        <Left>1.92549cm</Left>
         <Height>0.38989cm</Height>
         <Width>11.06652cm</Width>
         <ZIndex>7</ZIndex>
@@ -2211,8 +2220,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>16.34744cm</Top>
-        <Left>2.17398cm</Left>
+        <Top>16.60144cm</Top>
+        <Left>1.92549cm</Left>
         <Height>0.38989cm</Height>
         <Width>11.06652cm</Width>
         <ZIndex>8</ZIndex>
@@ -2225,10 +2234,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>19.3cm</Height>
+    <Height>19.22063cm</Height>
     <Style />
   </Body>
-  <Width>14.6cm</Width>
+  <Width>14.75cm</Width>
   <Page>
     <PageHeight>21cm</PageHeight>
     <PageWidth>14.8cm</PageWidth>

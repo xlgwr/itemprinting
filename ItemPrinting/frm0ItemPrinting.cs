@@ -140,7 +140,7 @@ namespace ItemPrinting
         private void btn5Print_Click(object sender, EventArgs e)
         {
            
-            Program.GenBarCode(pictureBox1, 112, 112, textBox1.Text);
+            Program.GenBarCode(pictureBox1, 113, 113, textBox1.Text);
            
             initDataToDataTable(textBox1.Text.Trim(), pictureBox1);
 
@@ -164,7 +164,7 @@ namespace ItemPrinting
 
         private void btn2QRcode_Click(object sender, EventArgs e)
         {
-            Program.GenBarCode(pictureBox1, 112, 112, textBox1.Text);
+            Program.GenBarCode(pictureBox1, 113, 113, textBox1.Text);
 
 
             initDataToDataTable(textBox1.Text.Trim(), pictureBox1);
