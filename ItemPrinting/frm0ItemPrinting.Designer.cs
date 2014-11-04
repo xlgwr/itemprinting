@@ -78,7 +78,6 @@ namespace ItemPrinting
             this.textBox1.Text = "eo-RT100(S1),V2SA3783310068,0025dcb0da4c,0025dcb0da4d,0025dcb0da4e,0025dcb0da4f,e" +
     "oRT-2b0da4e-g,eoRT-2b0da4f-a,0df03dc3734b14,13440381,eoRT-2b0da4e-gw,eoRT-2b0da4" +
     "f-aw,29d3fc3a6628a4";
-            this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyUp);
             // 
             // pictureBox1
             // 

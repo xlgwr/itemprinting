@@ -21,6 +21,7 @@ namespace ItemPrinting
         {
             InitializeComponent();
             initDataTable();
+            this.AcceptButton = btn5Print;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace ItemPrinting
             //this.reportViewer1.RefreshReport();
             //textBox1.Text = DateTime.Now.ToString("yyyMMddhhmm").Substring(0, 12);
             textBox1.Text="eo-RT100(S1),V2SA3783310027,0025dcb0d9a8,0025dcb0d9a9,0025dcb0d9aa,0025dcb0d9ab,eoRT-2b0d9aa-g,eoRT-2b0d9ab-a,a1a080a3122511,42475347,eoRT-2b0d9aa-gw,eoRT-2b0d9ab-aw,845555203c610a";
+        
         }
         void initDataTable()
         {
