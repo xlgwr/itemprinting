@@ -69,11 +69,13 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0 Culture=neutral, PublicKeyToken=89845dcd8080cc91">
       <Private>True</Private>
     </Reference>
-    <Reference Include="zxing">
-      <HintPath>..\lib\zxing\net4.0\zxing.dll</HintPath>
+    <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.dll</HintPath>
     </Reference>
-    <Reference Include="zxing.presentation">
-      <HintPath>..\lib\zxing\net4.0\zxing.presentation.dll</HintPath>
+    <Reference Include="zxing.presentation, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\ZXing.Net.0.14.0.1\lib\net40\zxing.presentation.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +102,7 @@
     <EmbeddedResource Include="frm0ItemPrinting.resx">
       <DependentUpon>frm0ItemPrinting.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Report1.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
